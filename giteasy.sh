@@ -28,7 +28,7 @@ fi
 
 ssh -T git@github.com 
 
-if [ "$1"x=="new"x ];then 
+if [ "$1"x = "new"x ];then 
    git remote add origin git@github.com:"$4"/"$5".git 
    echo "done"
 fi
