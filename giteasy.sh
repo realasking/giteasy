@@ -18,7 +18,6 @@ echo $sfile
 
 #init
 echo -n "Security settings..."
-#eval $(ssh-agent bash)
 ssh-add $sfile 
 echo "done"
 
@@ -45,4 +44,5 @@ read -p "Enter commit info:" cm
 git commit -m "$cm"
 echo -n "updating remote..."
 git push -u origin master
+eval `ssh-agent -k`
 echo "done"
