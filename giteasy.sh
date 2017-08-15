@@ -43,6 +43,10 @@ echo "done"
 read -p "Enter commit info:" cm
 git commit -m "$cm"
 echo -n "updating remote..."
-git push -u origin master
+if [ "$1"x=="new"x ];then
+   git push -u origin master
+else 
+   git push origin master
+fi
 eval `ssh-agent -k`
 echo "done"
