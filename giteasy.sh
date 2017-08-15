@@ -21,7 +21,7 @@ echo -n "Security settings..."
 ssh-add $sfile 
 echo "done"
 
-if [ "$1"x=="new"x ];then
+if [ "$1"x = "new"x ];then
    echo -n "Project initializing..."
    git init 
 fi
