@@ -10,7 +10,7 @@
 #$3 is the project folder 
 #$4 is user of github 
 #$5 is the project name in github 
-
+eval `ssh-agent`
 cd $3
 
 sfile="$HOME/.ssh/""$2"
@@ -18,7 +18,7 @@ echo $sfile
 
 #init
 echo -n "Security settings..."
-eval `ssh-agent bash`
+#eval $(ssh-agent bash)
 ssh-add $sfile 
 echo "done"
 
