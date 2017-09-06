@@ -33,7 +33,8 @@ if [ "$1"x = "new"x ];then
    echo "done"
 fi
 
-#start update 
+#start update
+git fetch
 echo -n "add changes..."
 git add .
 echo "done"
